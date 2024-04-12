@@ -14,9 +14,11 @@ include_directories(coralmicro)
 add_subdirectory(coralmicro)
 
 add_executable_m7(coralmicro-app
-        main.cc
+        image-stream.cc
 )
 
 target_link_libraries(coralmicro-app
-        libs_base-m7_freertos
+    libs_base-m7_freertos
+    libs_rpc_http_server
+    libs_rpc_utils
 )
